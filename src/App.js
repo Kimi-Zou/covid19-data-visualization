@@ -1,14 +1,15 @@
-import { Button, Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Layout } from 'antd';
+import { Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
-
+import All from './components/All';
+import Continents from './components/Continents';
+import Countries from './components/Countries';
+import USA from './components/USA';
 import './App.css';
 
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Content } = Layout;
 
 function App () {
   return (
@@ -25,10 +26,18 @@ function App () {
                 minHeight: 'calc(100vh - 88px)'
               }}
             >
-              Content
               <Switch>
                 <Route exact path='/'>
-                  {/* <Home /> */}
+                  <All />
+                </Route>
+                <Route exact path='/continents'>
+                  <Continents />
+                </Route>
+                <Route exact path='/countries'>
+                  <Countries />
+                </Route>
+                <Route exact path='/usa'>
+                  <USA />
                 </Route>
               </Switch>
             </Content>
