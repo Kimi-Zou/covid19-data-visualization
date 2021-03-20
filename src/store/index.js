@@ -1,7 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
+import allReducer from './all';
+
 const rootReducer = combineReducers({
+  all: allReducer
   // continent: continentReducer,
   // country: countryReducer,
   // state: stateReducer
