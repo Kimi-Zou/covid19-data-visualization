@@ -7,7 +7,6 @@ import { getToday, getYesterday, getTwoDaysAgo } from '../../store/all';
 import Paper from '@material-ui/core/Paper';
 import {
   Chart,
-  BarSeries,
   ArgumentAxis,
   ValueAxis,
   LineSeries
@@ -44,14 +43,13 @@ const All = () => {
 
   return (
     <>
-      <div>Total cases of one day</div>
+      <div>Total Coronavirus Cases in One Day</div>
       <Paper>
         <Chart
           data={chartData}
         >
           <ArgumentAxis />
           <ValueAxis />
-
           <LineSeries valueField='value' argumentField='argument' />
         </Chart>
       </Paper>

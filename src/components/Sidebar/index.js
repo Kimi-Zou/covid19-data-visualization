@@ -1,7 +1,7 @@
 import { Menu, Layout } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Sider } = Layout;
 
 const Sidebar = () => {
   return (
