@@ -27,18 +27,21 @@ export const setTwoDaysAgo = (data) => ({
 
 // ---------------- Thunk actions -------------------
 export const getToday = () => async dispatch => {
-  const res = await fetch('disease.sh/v3/covid-19/all');
-  dispatch(setToday(res.data));
+  const res = await fetch('https://disease.sh/v3/covid-19/all');
+  const data = await res.json();
+  dispatch(setToday(data));
 };
 
 export const getYesterday = () => async dispatch => {
-  const res = await fetch('disease.sh/v3/covid-19/all?yesterday');
-  dispatch(setToday(res.data));
+  const res = await fetch('https://disease.sh/v3/covid-19/all?yesterday');
+  const data = await res.json();
+  dispatch(setYesterday(data));
 };
 
 export const getTwoDaysAgo = () => async dispatch => {
-  const res = await fetch('disease.sh/v3/covid-19/all?twoDaysAgo');
-  dispatch(setToday(res.data));
+  const res = await fetch('https://disease.sh/v3/covid-19/all?twoDaysAgo');
+  const data = await res.json();
+  dispatch(setTwoDaysAgo(data));
 };
 
 // ---------------- Reducer -------------------

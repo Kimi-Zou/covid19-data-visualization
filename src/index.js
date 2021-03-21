@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 import configureStore from './store';
+import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
 import './index.css';
 
 const store = configureStore();
